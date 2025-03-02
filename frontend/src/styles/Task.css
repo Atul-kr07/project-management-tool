@@ -1,0 +1,239 @@
+/* Task Container Styles */
+.task-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: calc(100vh - 60px); /* Subtract navbar height */
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.task-container.light {
+    background: #e0e0e0;
+    color: #333;
+}
+
+.task-container.dark {
+    background: #181818;
+    color: white;
+}
+
+/* Header */
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.task-container.dark .task-header {
+    background: #222;
+    color: white;
+}
+
+.task-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* Task Controls */
+.task-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.task-container.dark .search-bar {
+    background: #333;
+    border-color: #444;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 200px;
+    color: #333;
+}
+
+.task-container.dark .search-bar input {
+    color: white;
+}
+
+.search-bar input::placeholder {
+    color: #666;
+}
+
+.task-container.dark .search-bar input::placeholder {
+    color: #bbb;
+}
+
+/* Filter Dropdown */
+.filter-dropdown select {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+    color: #333;
+    transition: background 0.3s ease;
+}
+
+.task-container.dark .filter-dropdown select {
+    background: #333;
+    border-color: #444;
+    color: white;
+}
+
+.filter-dropdown select option {
+    background: white;
+    color: #333;
+}
+
+.task-container.dark .filter-dropdown select option {
+    background: #333;
+    color: white;
+}
+
+/* Task Board Styles */
+.task-board {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.task-column {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 400px;
+    transition: background 0.3s ease;
+}
+
+.task-container.dark .task-column {
+    background: rgba(34, 34, 34, 0.8);
+}
+
+.task-column h3 {
+    margin: 0 0 15px 0;
+    font-size: 1.2rem;
+    color: #fff;
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.task-card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.task-container.dark .task-card {
+    background: #222;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.task-container.dark .task-card:hover {
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.task-card h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+}
+
+.task-container.dark .task-card h4 {
+    color: #fff;
+}
+
+.task-card p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.task-container.dark .task-card p {
+    color: #bbb;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.edit-btn {
+    background: #ffc107;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #e0a800;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .task-container {
+        padding: 10px;
+    }
+
+    .task-board {
+        flex-direction: column;
+    }
+
+    .task-column {
+        min-height: auto;
+        margin-bottom: 20px;
+    }
+
+    .search-bar input {
+        width: 150px;
+    }
+
+    .filter-dropdown select {
+        padding: 5px;
+        width: 120px;
+    }
+}

@@ -1,0 +1,105 @@
+.projects-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px;
+  min-width: 100vh;
+}
+
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.projects-controls {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+.filter-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.add-btn {
+  background: #28a745;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: #218838;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.edit-btn, .delete-btn {
+  border: none;
+  padding: 5px 8px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.edit-btn {
+  background: #007bff;
+  color: white;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.no-projects {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+}
